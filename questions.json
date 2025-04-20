@@ -1,0 +1,24 @@
+{
+    "question1": [
+        {
+            "_id": 1,
+            "question": "今、海と言われて思いつくものは？",
+            "answer1": {
+                "_id": "a",
+                "answer": "shimmering water surface at sunset",
+                "color1": "",
+                "color2": "",
+                "color3": "",
+                "next-key": ""
+            },
+            "answer2": {
+                "_id": "b",
+                "answer": "A deep blue ocean that goes on endlessly",
+                "color1": "",
+                "color2": "",
+                "color3": "",
+                "next-key": ""
+            }
+        }
+    ]
+}
