@@ -1,24 +1,96 @@
 {
-    "question1": [
-        {
-            "_id": 1,
-            "question": "今、海と言われて思いつくものは？",
-            "answer1": {
-                "_id": "a",
+    "Q1-1": {
+        "_id": 11,
+        "question": "今、海と言われて思いつくものは？",
+        "answers": [
+            {
+                "_id": "11a",
                 "answer": "shimmering water surface at sunset",
                 "color1": "",
                 "color2": "",
                 "color3": "",
-                "next-key": ""
+                "nextKey": "Q2-1"
             },
-            "answer2": {
-                "_id": "b",
+            {
+                "_id": "11b",
                 "answer": "A deep blue ocean that goes on endlessly",
                 "color1": "",
                 "color2": "",
                 "color3": "",
-                "next-key": ""
+                "nextKey": "Q2-2"
             }
-        }
-    ]
+        ]
+    },
+    "Q2-1": {
+        "_id": 21,
+        "question": "Which element you feel resonates with?",
+        "answers": [
+            {
+                "_id": "21a",
+                "answer": "Warm radiating sun",
+                "color1": "",
+                "color2": "",
+                "color3": "",
+                "nextKey": "Q3-1"
+            },
+            {
+                "_id": "21b",
+                "answer": "Wind Caressing people's cheeks",
+                "color1": "",
+                "color2": "",
+                "color3": "",
+                "nextKey": "Q3-2"
+            },
+            {
+                "_id": "21c",
+                "answer": "Glowing moon in the cloak of darkness",
+                "color1": "",
+                "color2": "",
+                "color3": "",
+                "nextKey": "Q3-3"
+            }
+        ]
+    },
+    "Q3-2": {
+        "_id": 32,
+        "question": "The world is ending in 24 hours and you have four options to spend the remaining time. Which one would you choose?",
+        "answers": [
+            {
+                "_id": "32a",
+                "answer": "go about your day as you usually do",
+                "color1": "",
+                "color2": "",
+                "color3": "",
+                "nextKey": "Q4-3"
+            },
+            {
+                "_id": "32b",
+                "answer": "Show gratitude to as much people you love as possible",
+                "color1": "",
+                "color2": "",
+                "color3": "",
+                "nextKey": "Q4-4"
+            }
+        ]
+    },
+    "Q4-3": {
+        "_id": 43,
+        "question": "The world is ending in 24 hours and you have four options to spend the remaining time. Which one would you choose?",
+        "answers": [
+            {
+                "_id": "43a",
+                "answer": "Brown",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            },
+            {
+                "_id": "43b",
+                "answer": "Orange",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            }
+        ]
+    }
 }

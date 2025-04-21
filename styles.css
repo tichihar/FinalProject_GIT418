@@ -65,8 +65,9 @@ table {
 }
 
 /* -------- Universal --------- */
-html {
+html, button {
     font-family: 'Poppins', 'Tilt Warp', serif;
+    font-weight: 600;
     text-align: center;
 }
 h1 {
@@ -74,6 +75,9 @@ h1 {
 }
 #launch-btn {
     font-size: 20px;
+}
+button {
+    font-size: 16px;
 }
 .white {
     color: var(--white);
@@ -118,6 +122,10 @@ header {
     justify-content: center;
     background-color: var(--black);
     border-radius: 32px / 32px;
+}
+#btns-holder {
+    display: flex;
+    flex-direction: column;
 }
 button {
     width: 336px;
