@@ -65,10 +65,11 @@ table {
 }
 
 /* -------- Universal --------- */
-html, button {
+body, button {
     font-family: 'Poppins', 'Tilt Warp', serif;
     font-weight: 600;
     text-align: center;
+    line-height: 1.5;
 }
 h1 {
     font-size: 32px;
@@ -76,14 +77,24 @@ h1 {
 #launch-btn {
     font-size: 20px;
 }
+h2 {
+    font-size: 24px;
+}
 button {
     font-size: 16px;
+    width: 336px;
+    height: 72px;
+    border-radius: 32px / 32px;
+    border: unset;
 }
 .white {
     color: var(--white);
 }
 .hidden {
     display: none;
+}
+.transparent {
+    opacity: 0;
 }
 
 /*-------- Header --------*/
@@ -100,6 +111,9 @@ header {
 }
 
 /*-------- Main --------*/
+main {
+    position: relative;
+}
 #quiz-holder {
     height: calc(100vh - 82.5px);
 }
@@ -107,7 +121,7 @@ header {
     height: inherit;
     display: grid;
     gap: 24px;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: .7fr 1.3fr;
     justify-items: center;
 }
 .upper-element {
@@ -126,9 +140,124 @@ header {
 #btns-holder {
     display: flex;
     flex-direction: column;
+    gap: 24px;
 }
-button {
-    width: 336px;
-    height: 72px;
-    border-radius: 32px / 32px;
+#bubbles-holder {
+    z-index: -1;
+    position:absolute;
+    top: 0;
+    height: calc(100vh - 82.5px);
+    width: 100vw;
+    overflow: hidden;
+}
+#bubbles-holder div {
+    position: absolute;
+    width: 40vw;
+    height: calc((100vh - 82.5px) / 2);
+}
+#quadrant2 {
+    right: 0;
+}
+#quadrant3 {
+    bottom: 0;
+}
+#quadrant4 {
+    right: 0;
+    bottom: 0;
+}
+.bubble {
+    position: absolute;
+    border-radius: 50%;
+}
+
+
+/* -------- Animation --------- */
+.fade-out {
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 1s ease-in, transform 1s ease-in;
+}
+.fade-in {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: opacity 1s ease-in, transform 1s ease-in;
+}
+#quadrant1 div {
+    animation-name: float-up;
+    animation-duration: 4s;
+}
+#quadrant2 div {
+    animation-name: float-down;
+    animation-duration: 6s;
+}
+#quadrant3 div {
+    animation-name: float-down;
+    animation-duration: 4s;
+}
+#quadrant4 div {
+    animation-name: float-up;
+    animation-duration: 6s;
+}
+.bubble {
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+#quadrant1.byebye-bubbles, #quadrant2.byebye-bubbles {
+    animation-name: removing-upper-bubbles;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+#quadrant3.byebye-bubbles, #quadrant4.byebye-bubbles {
+    animation-name: removing-lower-bubbles;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+}
+@keyframes float-up {
+    0% {
+        transform: translateY(0px)
+    }
+    100% {
+        transform: translateY(30px)
+    }
+}
+@keyframes float-down {
+    0% {
+        transform: translateY(0px)
+    }
+    100% {
+        transform: translateY(-26px)
+    }
+}
+@keyframes removing-upper-bubbles {
+    0% {
+        transform: translateY(0px)
+    }
+    20% {
+        transform: translateY(15px);
+    }
+    48% {
+        transform: translateY(15px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-400px);
+        opacity: .5;
+    }
+}
+@keyframes removing-lower-bubbles {
+    0% {
+        transform: translateY(0px)
+    }
+    20% {
+        transform: translateY(15px);
+    }
+    48% {
+        transform: translateY(15px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-800px);
+        opacity: .5;
+    }
 }

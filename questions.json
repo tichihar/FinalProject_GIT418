@@ -1,25 +1,23 @@
 {
     "Q1-1": {
         "_id": 11,
-        "question": "今、海と言われて思いつくものは？",
+        "question": "Imagine the ocean. Which version do you see right now?",
         "answers": [
             {
                 "_id": "11a",
-                "answer": "shimmering water surface at sunset",
-                "color1": "",
-                "color2": "",
-                "color3": "",
+                "answer": "A lively beach, bustling with people",
+                "color": ["#85d4ff", "#EDC9AF", "#F9F7F1"],
                 "nextKey": "Q2-1"
             },
             {
                 "_id": "11b",
-                "answer": "A deep blue ocean that goes on endlessly",
-                "color1": "",
-                "color2": "",
-                "color3": "",
-                "nextKey": "Q2-2"
+                "answer": "An endless expanse of deep blue ocean",
+                "color": ["#191970", "#7E6BF4", "#EAEAEA"],
+                "nextKey": "Q2-2",
+                "dark": true
             }
-        ]
+        ],
+        "colorPallet": ["#F9F7F1", "#a3dfff", "#2E8B57", "#3066BE", "#1E3F66"]
     },
     "Q2-1": {
         "_id": 21,
@@ -28,32 +26,68 @@
             {
                 "_id": "21a",
                 "answer": "Warm radiating sun",
-                "color1": "",
-                "color2": "",
-                "color3": "",
+                "color": [],
                 "nextKey": "Q3-1"
             },
             {
                 "_id": "21b",
                 "answer": "Wind Caressing people's cheeks",
-                "color1": "",
-                "color2": "",
-                "color3": "",
+                "color": [],
                 "nextKey": "Q3-2"
             },
             {
                 "_id": "21c",
                 "answer": "Glowing moon in the cloak of darkness",
+                "color": [],
+                "nextKey": "Q3-3"
+            }
+        ],
+        "colorPallet": ["#F9F7F1", "#a3dfff", "#2E8B57", "#3066BE", "#1E3F66"]
+    },
+    "Q2-2": {
+        "_id": 22,
+        "question": "Which feeling is about to swallow you whole?",
+        "answers": [
+            {
+                "_id": "22a",
+                "answer": "The crimson of dusk",
+                "color": ["#85d4ff", "#EDC9AF", "#F9F7F1"],
+                "nextKey": "Q3-4"
+            },
+            {
+                "_id": "22b",
+                "answer": "The eternal dark of night",
+                "color": ["#191970", "#7E6BF4", "#EAEAEA"],
+                "nextKey": "Q3-5"
+            }
+        ],
+        "colorPallet": ["#F9F7F1", "#a3dfff", "#2E8B57", "#3066BE", "#1E3F66"]
+    },
+    "Q3-1": {
+        "_id": 31,
+        "question": "A child is playing in front of you — what are they holding?",
+        "answers": [
+            {
+                "_id": "31a",
+                "answer": "A balloon that looks like it could pop at any moment",
                 "color1": "",
                 "color2": "",
                 "color3": "",
-                "nextKey": "Q3-3"
+                "nextKey": "Q4-1"
+            },
+            {
+                "_id": "31b",
+                "answer": "A paper airplane with its wings wide open",
+                "color1": "",
+                "color2": "",
+                "color3": "",
+                "nextKey": "Q4-2"
             }
         ]
     },
     "Q3-2": {
         "_id": 32,
-        "question": "The world is ending in 24 hours and you have four options to spend the remaining time. Which one would you choose?",
+        "question": "The world is ending in 24 hours. Which one would you likely to do?",
         "answers": [
             {
                 "_id": "32a",
@@ -73,9 +107,130 @@
             }
         ]
     },
+    "Q3-3": {
+        "_id": 33,
+        "question": "Imagine you're sketching a tree in your mind. Which reflects the most with the one you had in head?",
+        "answers": [
+            {
+                "_id": "33a",
+                "answer": "Like an apple tree, bearing fruits here and there",
+                "color1": "",
+                "color2": "",
+                "color3": "",
+                "nextKey": "Q4-5"
+            },
+            {
+                "_id": "33b",
+                "answer": "Like a pine tree, pointy top reaching for the sky",
+                "color1": "",
+                "color2": "",
+                "color3": "",
+                "nextKey": "Q4-6"
+            }
+        ]
+    },
+    "Q3-4": {
+        "_id": 34,
+        "question": "You feel a tap on your shoulder. A woman stands before you — what kind of presence does she carry?",
+        "answers": [
+            {
+                "_id": "34a",
+                "answer": "A gentle figure with a soft and delicate aura",
+                "color1": "",
+                "color2": "",
+                "color3": "",
+                "nextKey": "Q4-7"
+            },
+            {
+                "_id": "34b",
+                "answer": "A lively woman, glowing with confidence and spirit",
+                "color1": "",
+                "color2": "",
+                "color3": "",
+                "nextKey": "Q4-8"
+            }
+        ]
+    },
+    "Q3-5": {
+        "_id": 35,
+        "question": "Tonight, you've become a celestial body. Which one are you right now?",
+        "answers": [
+            {
+                "_id": "35a",
+                "answer": "A faint star twinkling on the edge of the universe",
+                "color1": "",
+                "color2": "",
+                "color3": "",
+                "nextKey": "Q4-9"
+            },
+            {
+                "_id": "35b",
+                "answer": "A black hole that devours light and sound",
+                "color1": "",
+                "color2": "",
+                "color3": "",
+                "nextKey": "Q4-10"
+            },
+            {
+                "_id": "35c",
+                "answer": "A meteor tearing through the silence of night",
+                "color1": "",
+                "color2": "",
+                "color3": "",
+                "nextKey": "Q4-11"
+            }
+        ]
+    },
+    "Q4-1": {
+        "_id": 41,
+        "question": "Boom! Your Fairly Godmother is here!! She offers to turn you into an animal so you can secretly get close to the one you have feelings for. Which would you choose?",
+        "answers": [
+            {
+                "_id": "41a",
+                "answer": "A chirping little bird",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            },
+            {
+                "_id": "41b",
+                "answer": "A nonchalant acting cat",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            }
+        ]
+    },
+    "Q4-2": {
+        "_id": 42,
+        "question": "If your feelings right now had a color, what would they be?",
+        "answers": [
+            {
+                "_id": "42a",
+                "answer": "Green",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            },
+            {
+                "_id": "42b",
+                "answer": "Yellow",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            },
+            {
+                "_id": "42c",
+                "answer": "Blue",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            }
+        ]
+    },
     "Q4-3": {
         "_id": 43,
-        "question": "The world is ending in 24 hours and you have four options to spend the remaining time. Which one would you choose?",
+        "question": "If your feelings right now had a color, what would they be?",
         "answers": [
             {
                 "_id": "43a",
@@ -87,6 +242,173 @@
             {
                 "_id": "43b",
                 "answer": "Orange",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            }
+        ]
+    },
+    "Q4-4": {
+        "_id": 44,
+        "question": "If your feelings right now had a color, what would they be?",
+        "answers": [
+            {
+                "_id": "44a",
+                "answer": "Green",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            },
+            {
+                "_id": "44b",
+                "answer": "Blue",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            }
+        ]
+    },
+    "Q4-5": {
+        "_id": 45,
+        "question": "If your feelings right now had a color, what would they be?",
+        "answers": [
+            {
+                "_id": "45a",
+                "answer": "Pink",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            },
+            {
+                "_id": "45b",
+                "answer": "Yellow",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            }
+        ]
+    },
+    "Q4-6": {
+        "_id": 46,
+        "question": "If your feelings right now had a color, what would they be?",
+        "answers": [
+            {
+                "_id": "46a",
+                "answer": "Maroon",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            },
+            {
+                "_id": "46b",
+                "answer": "Hot Pink",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            },
+            {
+                "_id": "46c",
+                "answer": "Violet",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            }
+        ]
+    },
+    "Q4-7": {
+        "_id": 47,
+        "question": "If your feelings right now had a color, what would they be?",
+        "answers": [
+            {
+                "_id": "47a",
+                "answer": "Desert sand",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            },
+            {
+                "_id": "47b",
+                "answer": "Coral",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            }
+        ]
+    },
+    "Q4-8": {
+        "_id": 48,
+        "question": "If your feelings right now had a color, what would they be?",
+        "answers": [
+            {
+                "_id": "48a",
+                "answer": "Lavender",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            },
+            {
+                "_id": "48b",
+                "answer": "Carmine",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            }
+        ]
+    },
+    "Q4-9": {
+        "_id": 49,
+        "question": "If your feelings right now had a color, what would they be?",
+        "answers": [
+            {
+                "_id": "49a",
+                "answer": "Chacoal Gray",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            },
+            {
+                "_id": "49b",
+                "answer": "Teal",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            }
+        ]
+    },
+    "Q4-10": {
+        "_id": 410,
+        "question": "If your feelings right now had a color, what would they be?",
+        "answers": [
+            {
+                "_id": "410a",
+                "answer": "Crimson",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            },
+            {
+                "_id": "410b",
+                "answer": "Petrol Blue",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            }
+        ]
+    }, 
+    "Q4-11": {
+        "_id": 411,
+        "question": "If your feelings right now had a color, what would they be?",
+        "answers": [
+            {
+                "_id": "411a",
+                "answer": "Midnight Blue",
+                "color1": "",
+                "color2": "",
+                "color3": ""
+            },
+            {
+                "_id": "411b",
+                "answer": "Electric Indgo",
                 "color1": "",
                 "color2": "",
                 "color3": ""
