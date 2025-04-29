@@ -5,7 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Capture Mood with Spotify</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.1/jquery-ui.js"></script>
     <script src="scripts.js" defer></script>
+
 </head>
 <body>
     <header>
@@ -25,7 +30,9 @@
             </ul>
     </header>
     <main>
-        <div id="quiz-holder" class="transparent"></div>
+        <section id="main-content">
+            <div id="quiz-holder" class="transparent"></div>
+        </section>
         <div id="bubbles-holder" class="transparent">
             <div id="quadrant1"></div>
             <div id="quadrant2"></div>

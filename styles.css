@@ -114,19 +114,26 @@ header {
 main {
     position: relative;
 }
-#quiz-holder {
+#main-content {
+    display: grid;
+    grid-template-rows: .8fr .2fr;
     height: calc(100vh - 82.5px);
+}
+#quiz-holder {
+    height: 100%;
 }
 #quiz-holder > div {
     height: inherit;
     display: grid;
     gap: 24px;
-    grid-template-rows: .7fr 1.3fr;
+    grid-template-rows: 1fr 1fr;
     justify-items: center;
 }
 .upper-element {
     display: flex;
     align-items: flex-end;
+    justify-content: center;
+    width: 85vw;
 }
 #launch-btn {
     width: 288px;
@@ -141,6 +148,24 @@ main {
     display: flex;
     flex-direction: column;
     gap: 24px;
+}
+#progress-bar {
+    background-color: #F7F2F6;
+    width: 80vw;
+    margin: 0 auto;
+    height: 16px;
+    border-radius: 13px 13px;
+    border: unset;
+    box-shadow: inset -1px 6px 6px 1px rgba(0, 0, 0, 0.1), inset 0px 4px 4px rgba(0, 0, 0, 0.06);
+}
+.ui-progressbar-value {
+    width: 25%;
+    border-radius: 13px 13px;
+    box-shadow: 3px 0px 4px -1px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.06);
+    margin: unset !important;
+}
+.ui-widget-header {
+    border: unset !important;
 }
 #bubbles-holder {
     z-index: -1;
@@ -168,6 +193,7 @@ main {
 .bubble {
     position: absolute;
     border-radius: 50%;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.06);
 }
 
 

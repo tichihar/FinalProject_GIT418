@@ -6,43 +6,44 @@
             {
                 "_id": "11a",
                 "answer": "A lively beach, bustling with people",
-                "color": ["#85d4ff", "#EDC9AF", "#F9F7F1"],
+                "color": ["FFE7D6", "FFA585", "7CC9CB"],
                 "nextKey": "Q2-1"
             },
             {
                 "_id": "11b",
                 "answer": "An endless expanse of deep blue ocean",
-                "color": ["#191970", "#7E6BF4", "#EAEAEA"],
+                "color": ["0059B3", "004080", "012345"],
                 "nextKey": "Q2-2",
-                "dark": true
+                "white": true
             }
         ],
-        "colorPallet": ["#F9F7F1", "#a3dfff", "#2E8B57", "#3066BE", "#1E3F66"]
+        "colorTheme": "firstPalette"
     },
     "Q2-1": {
         "_id": 21,
-        "question": "Which element you feel resonates with?",
+        "question": "Which symbol of nature is closest to how you feel right now?",
         "answers": [
             {
                 "_id": "21a",
-                "answer": "Warm radiating sun",
-                "color": [],
+                "answer": "A glowing, golden sun",
+                "color": ["FAB982", "F4AE52", "F4CC7F"],
                 "nextKey": "Q3-1"
             },
             {
                 "_id": "21b",
-                "answer": "Wind Caressing people's cheeks",
-                "color": [],
+                "answer": "A gentle breeze caressing past cheeks ",
+                "color": ["6DC2C5", "B8E5D1", "93D4CB"],
                 "nextKey": "Q3-2"
             },
             {
                 "_id": "21c",
-                "answer": "Glowing moon in the cloak of darkness",
-                "color": [],
-                "nextKey": "Q3-3"
+                "answer": "A moon shining through the midnight veil",
+                "color": ["BBA138", "5C6B8A", "2E3440"],
+                "nextKey": "Q3-3",
+                "white": true
             }
         ],
-        "colorPallet": ["#F9F7F1", "#a3dfff", "#2E8B57", "#3066BE", "#1E3F66"]
+        "colorTheme": "kiPalette"
     },
     "Q2-2": {
         "_id": 22,
@@ -51,17 +52,18 @@
             {
                 "_id": "22a",
                 "answer": "The crimson of dusk",
-                "color": ["#85d4ff", "#EDC9AF", "#F9F7F1"],
+                "color": ["CC7D9A", "F3A76E", "F0DC88"],
                 "nextKey": "Q3-4"
             },
             {
                 "_id": "22b",
                 "answer": "The eternal dark of night",
-                "color": ["#191970", "#7E6BF4", "#EAEAEA"],
-                "nextKey": "Q3-5"
+                "color": ["0A0A0A", "252525", "141414"],
+                "nextKey": "Q3-5",
+                "white": true
             }
         ],
-        "colorPallet": ["#F9F7F1", "#a3dfff", "#2E8B57", "#3066BE", "#1E3F66"]
+        "colorTheme": "aiPalette"
     },
     "Q3-1": {
         "_id": 31,
@@ -70,17 +72,13 @@
             {
                 "_id": "31a",
                 "answer": "A balloon that looks like it could pop at any moment",
-                "color1": "",
-                "color2": "",
-                "color3": "",
+                "color": ["EFCA08", "F4A6A4", "EE7674"],
                 "nextKey": "Q4-1"
             },
             {
                 "_id": "31b",
                 "answer": "A paper airplane with its wings wide open",
-                "color1": "",
-                "color2": "",
-                "color3": "",
+                "color": ["FFE485", "92BEC8", "90B69F"],
                 "nextKey": "Q4-2"
             }
         ]
@@ -92,18 +90,16 @@
             {
                 "_id": "32a",
                 "answer": "go about your day as you usually do",
-                "color1": "",
-                "color2": "",
-                "color3": "",
-                "nextKey": "Q4-3"
+                "color": ["1768AC", "5DAAE9", "EE7674"],
+                "nextKey": "Q4-3",
+                "white": true
             },
             {
                 "_id": "32b",
                 "answer": "Show gratitude to as much people you love as possible",
-                "color1": "",
-                "color2": "",
-                "color3": "",
-                "nextKey": "Q4-4"
+                "color": ["D63230", "FFA62B", "FF5A5F"],
+                "nextKey": "Q4-4",
+                "white": true
             }
         ]
     },
@@ -114,18 +110,16 @@
             {
                 "_id": "33a",
                 "answer": "Like an apple tree, bearing fruits here and there",
-                "color1": "",
-                "color2": "",
-                "color3": "",
-                "nextKey": "Q4-5"
+                "color": ["F45D52", "F47066", "FF709B"],
+                "nextKey": "Q4-5",
+                "white": true
             },
             {
                 "_id": "33b",
                 "answer": "Like a pine tree, pointy top reaching for the sky",
-                "color1": "",
-                "color2": "",
-                "color3": "",
-                "nextKey": "Q4-6"
+                "color": ["779834", "99C149", "A07240"],
+                "nextKey": "Q4-6",
+                "white": true
             }
         ]
     },
@@ -136,18 +130,15 @@
             {
                 "_id": "34a",
                 "answer": "A gentle figure with a soft and delicate aura",
-                "color1": "",
-                "color2": "",
-                "color3": "",
+                "color": ["EF8B80", "EED181", "F7EAC5"],
                 "nextKey": "Q4-7"
             },
             {
                 "_id": "34b",
                 "answer": "A lively woman, glowing with confidence and spirit",
-                "color1": "",
-                "color2": "",
-                "color3": "",
-                "nextKey": "Q4-8"
+                "color": ["908483", "CBADA4", "A95C68"],
+                "nextKey": "Q4-8",
+                "white": true
             }
         ]
     },
@@ -158,28 +149,26 @@
             {
                 "_id": "35a",
                 "answer": "A faint star twinkling on the edge of the universe",
-                "color1": "",
-                "color2": "",
-                "color3": "",
-                "nextKey": "Q4-9"
+                "color": ["262103", "908514", "292500"],
+                "nextKey": "Q4-9",
+                "white": true
             },
             {
                 "_id": "35b",
                 "answer": "A black hole that devours light and sound",
-                "color1": "",
-                "color2": "",
-                "color3": "",
-                "nextKey": "Q4-10"
+                "color": ["060A1E", "123569", "320C50"],
+                "nextKey": "Q4-10",
+                "white": true
             },
             {
                 "_id": "35c",
                 "answer": "A meteor tearing through the silence of night",
-                "color1": "",
-                "color2": "",
-                "color3": "",
-                "nextKey": "Q4-11"
+                "color": ["20495B", "8B99A7", "193E61"],
+                "nextKey": "Q4-11",
+                "white": true
             }
-        ]
+        ],
+        "colorTheme": "aiPalette"
     },
     "Q4-1": {
         "_id": 41,
@@ -188,16 +177,12 @@
             {
                 "_id": "41a",
                 "answer": "A chirping little bird",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["F7B3CD", "FCB1A6", "FFDCCC"]
             },
             {
                 "_id": "41b",
                 "answer": "A nonchalant acting cat",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["FDD8DC", "B6B3E5", "FB6376"]
             }
         ]
     },
@@ -208,25 +193,20 @@
             {
                 "_id": "42a",
                 "answer": "Green",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["008000", "BED8B2", "E5E57A"]
             },
             {
                 "_id": "42b",
                 "answer": "Yellow",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["EAD61F", "F4E87C", "FFDE85"]
             },
             {
                 "_id": "42c",
                 "answer": "Blue",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["2541B2", "89CFF0", "1768AC"]
             }
-        ]
+        ],
+        "colorTheme": "rakuPalette"
     },
     "Q4-3": {
         "_id": 43,
@@ -235,16 +215,14 @@
             {
                 "_id": "43a",
                 "answer": "Brown",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["874508", "C1630B", "D46D0C"],
+                "dark": true
             },
             {
                 "_id": "43b",
                 "answer": "Orange",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["1768AC", "F4963E", "1768AC"],
+                "dark": true
             }
         ]
     },
@@ -255,16 +233,12 @@
             {
                 "_id": "44a",
                 "answer": "Green",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["719876", "B2BF8A", "88B3BA"]
             },
             {
                 "_id": "44b",
                 "answer": "Blue",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["2541B2", "D2A80F", "1768AC"]
             }
         ]
     },
@@ -275,16 +249,13 @@
             {
                 "_id": "45a",
                 "answer": "Pink",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["F2D9D6", "D7435D", "902742"],
+                "white": true
             },
             {
                 "_id": "45b",
                 "answer": "Yellow",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["BD89D2", "F4BB01", "E8D873"]
             }
         ]
     },
@@ -295,23 +266,20 @@
             {
                 "_id": "46a",
                 "answer": "Maroon",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["980B1C", "C53049", "550000"],
+                "white": true
             },
             {
                 "_id": "46b",
                 "answer": "Hot Pink",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["FF446A", "FF6EC7", "B8657D"],
+                "white": true
             },
             {
                 "_id": "46c",
                 "answer": "Violet",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["6D00AF", "FF3FB9", "0298CA"],
+                "white": true
             }
         ]
     },
@@ -322,16 +290,12 @@
             {
                 "_id": "47a",
                 "answer": "Desert sand",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["EDCF96", "D8B384", "EDC9AF"]
             },
             {
                 "_id": "47b",
                 "answer": "Coral",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["F7C8A0", "F2B88B", "F3A66E"]
             }
         ]
     },
@@ -342,16 +306,14 @@
             {
                 "_id": "48a",
                 "answer": "Lavender",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["E6B1D6", "BF8BB0", "916494"],
+                "white": true
             },
             {
                 "_id": "48b",
                 "answer": "Carmine",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["A95C68", "C7837F", "B8737C"],
+                "white": true
             }
         ]
     },
@@ -362,16 +324,14 @@
             {
                 "_id": "49a",
                 "answer": "Chacoal Gray",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["252525", "3B4654", "313135"],
+                "white": true
             },
             {
                 "_id": "49b",
                 "answer": "Teal",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["005F6B", "407B8A", "005B5B"],
+                "white": true
             }
         ]
     },
@@ -382,16 +342,14 @@
             {
                 "_id": "410a",
                 "answer": "Crimson",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["371722", "682E3C", "8A3C36"],
+                "white": true
             },
             {
                 "_id": "410b",
                 "answer": "Petrol Blue",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["323549", "306D88", "5F8181"],
+                "white": true
             }
         ]
     }, 
@@ -402,16 +360,14 @@
             {
                 "_id": "411a",
                 "answer": "Midnight Blue",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["908514", "193E61", "191970"],
+                "white": true
             },
             {
                 "_id": "411b",
                 "answer": "Electric Indgo",
-                "color1": "",
-                "color2": "",
-                "color3": ""
+                "color": ["BBA138", "6F00FF", "425ED2"],
+                "white": true
             }
         ]
     }

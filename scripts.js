@@ -6,6 +6,18 @@ let contentHolder = document.getElementById("quiz-holder");
 let allQuestions;
 // unique number to track which path the user took to match it with the playlist number
 let identifier = "";
+// track the progress
+let progressValue = 0;
+
+let colorPalettes = new Object;
+colorPalettes = {
+    firstPalette: ["F4F4F4", "F4F4F6", "EEEEEE", "BFBFBF", "E6E6E9"],
+    lovePalette: ["fbeaec", "e0bbcc", "fff1f5", "d7c1e0"],
+    kiPalette: ["D4F1F9", "FFF2CC", "FFE5A1", "DCD9F2", "DFE4F2"],
+    doPalette: ["7914AD"],
+    aiPalette: ["0E4A6C", "136290", "003769", "2C345C", "40434E", "879191", "615483"],
+    rakuPalette: ["678D58", "98BB77 ", "C1D6AE", "FFC870", "F9EFDC"]
+}
 
 // event called upon the pageload
 window.addEventListener("load", function () {
@@ -29,15 +41,28 @@ window.addEventListener("load", function () {
 
         // add event to the button to start the quiz
         this.document.getElementById("launch-btn").onclick = function() {
-        document.getElementById("launch-btn").disabled = true;
-        // get data from the questions.json
-        fetch("questions.json")
-            .then(response => response.json())
-            .then(data => {
-                allQuestions = data;
-                console.log(data)
-                displayQuestion("Q1-1");
-            });
+
+            document.getElementById("launch-btn").disabled = true;
+
+            const pBar = document.createElement("div");
+            pBar.setAttribute("id", "progress-bar");
+            pBar.classList.add("transparent");
+            document.getElementById("main-content").appendChild(pBar);
+
+            // get data from the questions.json
+            fetch("questions.json")
+                .then(response => response.json())
+                .then(data => {
+                    allQuestions = data;
+                    console.log(data)
+                });
+
+            addProgressBar()
+            displayQuestion("Q1-1");
+            setTimeout(() => {
+                pBar.classList.add("fade-in")
+                pBar.classList.remove("transparent")
+            }, 2100)
         }
     }, 100)
 });
@@ -46,6 +71,7 @@ window.addEventListener("load", function () {
 function displayQuestion(key) {
 
     contentHolder.classList.add("fade-out");
+    updateProgressBar(progressValue);
 
     setTimeout(() => {
         let customBtns = "";
@@ -73,9 +99,9 @@ function displayQuestion(key) {
             let grad1 = Math.floor(Math.random() * 15);
             let grad2 = Math.floor((Math.random() * 8) + 51);
             let grad3 = Math.floor((Math.random() * 15) + 86);
-            answerBtn.style.backgroundImage = `linear-gradient(${deg}deg, ${allQuestions[key].answers[i].color[0]} ${grad1}%, ${allQuestions[key].answers[i].color[1]} ${grad2}%, ${allQuestions[key].answers[i].color[2]} ${grad3}%)`
+            answerBtn.style.backgroundImage = `linear-gradient(${deg}deg, #${allQuestions[key].answers[i].color[0]} ${grad1}%, #${allQuestions[key].answers[i].color[1]} ${grad2}%, #${allQuestions[key].answers[i].color[2]} ${grad3}%)`
 
-            if(allQuestions[key].answers[i].dark)
+            if(allQuestions[key].answers[i].white)
                 answerBtn.classList.add("white");
         }
 
@@ -89,23 +115,33 @@ function displayQuestion(key) {
         let btns = document.querySelectorAll("button");
         btns.forEach(btn => 
             btn.onclick = () => {
+                console.log(btn);
+                console.log(btn.target);
+                progressValue += 25;
+
                 btns.forEach(btn => btn.disabled = true);
                 for(let answer of allQuestions[key].answers) {
                     if(answer._id === btn.id) {
+                        const colorSelection = answer.color;
+                        const firstPick = Math.floor(Math.random() * 3);
+                        const color1 = "#" + colorSelection[firstPick];
+                        colorSelection.splice(firstPick, 1);
+                        const color2 = "#" + colorSelection[Math.floor(Math.random() * 2)];
+
                         identifier += answer._id;
-                        console.log(identifier);
+                        removingBubbles();
                         if(answer.nextKey) {
-                            removingBubbles();
                             displayQuestion(answer.nextKey);
                         } else {
                             displayPlaylist()
                         }
+                        updateProgressBar(progressValue, color1, color2);
                     }
                 }
             }
         )
     }, 2000);
-}
+};
 
 function displayPlaylist() {
     let iframe = document.createElement("iframe");
@@ -118,15 +154,19 @@ function displayPlaylist() {
         .then(data => {
             iframe.src = `https://open.spotify.com/embed/playlist/${data[identifier].link}?utm_source=generator`;
 
-            contentHolder.innerHTML = "";
-            contentHolder.appendChild(iframe);
-        })
-}
+
+            setTimeout(() => {
+                contentHolder.innerHTML = "";
+                contentHolder.appendChild(iframe);
+
+            }, 5000)
+        });
+
+};
 
 function bubbleGenerator(key) {
     let bubblesHolder = document.getElementById("bubbles-holder");
 
-    let colorPallet = allQuestions[key].colorPallet;
     bubblesHolder.classList.remove("transparent");
 
     let quadrants = document.querySelectorAll("#bubbles-holder div");
@@ -151,27 +191,74 @@ function bubbleGenerator(key) {
         bubble.style.top = `${top}px`;
         bubble.style.left = `${left}px`;
 
-        let color1 = colorPallet[Math.floor(Math.random() * 5)];
-        let color2 = colorPallet[Math.floor(Math.random() * 5)];
-        let color3 = colorPallet[Math.floor(Math.random() * 5)];
+        let paletteType = [];
+        if(allQuestions[key].colorTheme) {
+            paletteType.push(...colorPalettes[allQuestions[key].colorTheme])
+        } else {
+            allQuestions[key].answers.forEach(answer => {
+                paletteType.push(...answer.color);
+            })
+        }
+
+        console.log(paletteType)
+        const firstPick = Math.floor(Math.random() * paletteType.length);
+        let color1 = "#" + paletteType[firstPick];
+        paletteType.splice(firstPick, 1);
+        let color2 = "#" + paletteType[Math.floor(Math.random() * paletteType.length)];
         let deg = Math.floor(Math.random() * 361);
         let grad1 = Math.floor(Math.random() * 31);
         let grad2 = Math.floor((Math.random() * 31) + 70);
 
         bubble.style.backgroundImage = `linear-gradient(${deg}deg, ${color1} ${grad1}%, ${color2} ${grad2}%)`
-        bubble.style.boxShadow = `0 0 ${size / 4}px ${color2}`
 
         quadrant.appendChild(bubble)
         setTimeout(() => {
             bubble.classList.remove("fade-out");
             bubble.classList.add("fade-in");
-            setTimeout(() => bubble.classList.remove("fade-in"), 300);
+            setTimeout(() => bubble.classList.remove("fade-in"), 800);
 
-        }, 300);
+        }, 800);
     })
-}
+};
 
 function removingBubbles() {
     let quadrants = document.querySelectorAll("#bubbles-holder div");
-    quadrants.forEach(quadrant => quadrant.classList.add("byebye-bubbles"));
+    quadrants.forEach(quadrant => {
+        quadrant.classList.add("byebye-bubbles");
+    });
+
+    setTimeout(() => {quadrants.forEach(quadrant => {
+        document.getElementById("bubbles-holder").classList.add("transparent");
+        quadrant.classList.remove("byebye-bubbles");
+    }
+    )}, 2000);
+};
+
+
+// JQuery starts from here
+let currentValue = 0;
+function addProgressBar() {
+    $("#progress-bar").progressbar({
+        value: 0
+    });
+};
+
+function updateProgressBar(progress, color1, color2) {
+    let newValue = progress;
+
+    $({value: currentValue}).animate({value: newValue}, {
+        duration: 2000,
+        easing: "swing",
+        step: function(update) {
+            $("#progress-bar").progressbar("value", update);
+        },
+        complete: function() {
+            currentValue = progress;
+        }
+    })
+
+    $(".ui-progressbar-value").css({
+        "background-image": `linear-gradient(45deg, ${color1} 34%, ${color2} 80%)`,
+        "transition": "background-image 5s ease-in-out"
+    })
 }
