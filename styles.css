@@ -107,7 +107,9 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 24px 48px 24px 32px;
+    padding-right: 48px;
+    padding-left: 32px;
+    height: 88px;
 }
 
 /*-------- Main --------*/
@@ -168,7 +170,7 @@ main {
     z-index: -1;
     position:absolute;
     top: 0;
-    height: calc(100vh - 82.5px);
+    min-height: calc(100vh - 80px - 88px);
     width: 100vw;
     overflow: hidden;
 }
@@ -227,6 +229,19 @@ main {
     font-size: 2rem;
 }
 
+/* -------- footer --------- */
+footer {
+    height: 80px;
+    width: 100%;
+    background: var(--black);
+    color: var(--white);
+}
+footer small {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
 /* -------- Animation --------- */
 .fade-out {
     opacity: 0;

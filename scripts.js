@@ -24,13 +24,41 @@ colorPalettes = {
 
 // event called upon the pageload
 window.addEventListener("load", () => {
+    // get data from the questions.json and assign it in the allQuestions variable
+    fetch("questions.json")
+    .then(response => response.json())
+    .then(data => {
+        allQuestions = data;
+    });
+
     fetch("playlists.json")
         .then(response => response.json())
         .then(data => {
             allPlaylists = data;
         });
-    newQuiz();
-    intializeSwiper()
+
+    // create a landing/start page and add it to the main-content
+    let introHolder = document.createElement("div");
+    introHolder.setAttribute("id", "intro-holder")
+    introHolder.classList.add("transparent", "main-script");
+    introHolder.innerHTML = `
+    <h1 id="start-title" class="upper-element">Let's capture<br />your mood with<br />Songs!</h1>
+    <button id="launch-btn" class="white">Get Started ></button>
+    `;
+    contentHolder.appendChild(introHolder)
+
+    setTimeout(() => {
+    revealElement("intro-holder");
+    }, 1000)
+
+    // launch the quiz upon click to add event to the button to start the quiz
+    document.getElementById("launch-btn").onclick = function() {
+        // prevent from clicking more than one time
+        document.getElementById("launch-btn").disabled = true;
+
+        removeElement("intro-holder");
+        newQuiz();
+    }
 });
 
 // function to display the first page
@@ -39,27 +67,6 @@ function newQuiz() {
     identifier = "";
     progressValue = 0;
     currentValue = 0;
-
-     // create a landing/start page and add it to the main-content
-     let introHolder = document.createElement("div");
-     introHolder.setAttribute("id", "intro-holder")
-     introHolder.classList.add("transparent", "main-script");
-     introHolder.innerHTML = `
-     <h1 id="start-title" class="upper-element">Let's capture<br />your mood with<br />Songs!</h1>
-     <button id="launch-btn" class="white">Get Started ></button>
-     `;
-     contentHolder.appendChild(introHolder)
-
-     setTimeout(() => {
-        revealElement("intro-holder");
-     }, 1000)
- 
-     // launch the quiz upon click to add event to the button to start the quiz
-     document.getElementById("launch-btn").onclick = function() {
-        // prevent from clicking more than one time
-        document.getElementById("launch-btn").disabled = true;
-
-        removeElement("intro-holder");
 
         // create an element to display quiz info
         const quizHolder = document.createElement("div");
@@ -71,13 +78,6 @@ function newQuiz() {
         pBar.setAttribute("id", "progress-bar");
         pBar.classList.add("transparent");
 
-        // get data from the questions.json and assign it in the allQuestions variable
-        fetch("questions.json")
-            .then(response => response.json())
-            .then(data => {
-                allQuestions = data;
-            });
-        
         // append all elements created in this function after the introHolder is completely gone
         setTimeout(() => {
             contentHolder.appendChild(quizHolder);
@@ -85,8 +85,8 @@ function newQuiz() {
             addProgressBar(progressValue)
             displayQuestion("Q1-1");
         }, 1000)
-    }
 }
+
 // function to display questions
 function displayQuestion(key) {
     // access quiz-holder in the DOM tree
@@ -116,6 +116,7 @@ function displayQuestion(key) {
         let grad1 = Math.floor(Math.random() * 15);
         let grad2 = Math.floor((Math.random() * 8) + 51);
         let grad3 = Math.floor((Math.random() * 15) + 86);
+        console.log(allQuestions[key].answers[i].color[0], allQuestions[key].answers[i].color[1], allQuestions[key].answers[i].color[3]);
         answerBtn.style.backgroundImage = `linear-gradient(${deg}deg, #${allQuestions[key].answers[i].color[0]} ${grad1}%, #${allQuestions[key].answers[i].color[1]} ${grad2}%, #${allQuestions[key].answers[i].color[2]} ${grad3}%)`
 
         if(allQuestions[key].answers[i].white)
@@ -124,12 +125,11 @@ function displayQuestion(key) {
 
     setTimeout(() => {
         revealElement("quiz-holder");
-    }, 1500)
+    }, 500)
 
     let btns = document.querySelectorAll("button");
     btns.forEach(btn => 
         btn.onclick = () => {
-            quizHolder.classList.remove("fade-in")
             // disable the button action to avoid clicking more than two times
             btns.forEach(btn => btn.disabled = true);
 
@@ -140,7 +140,7 @@ function displayQuestion(key) {
             for(let answer of allQuestions[key].answers) {
                 if(answer._id === btn.id) {
                     //pick the colors for the progress bar
-                    const colorSelection = answer.color;
+                    const colorSelection = [...answer.color];
                     const firstPick = Math.floor(Math.random() * 3);
                     const color1 = "#" + colorSelection[firstPick];
                     colorSelection.splice(firstPick, 1);
@@ -151,6 +151,7 @@ function displayQuestion(key) {
 
                     // check if there are still quizes left
                     if(progressValue < 100) {
+                        quizHolder.classList.remove("fade-in");
                         quizHolder.classList.add("fade-out");
                         // remove bubbles
                         removeBubbles();
@@ -160,13 +161,17 @@ function displayQuestion(key) {
                             displayQuestion(answer.nextKey);
                         },2000)
                     } else {
-                        removeElement("quiz-holder");
-                        removeElement("progress-bar");
-                        updateMoodList();
-                        displayPlaylist().then(() => {
-                            intializeSwiper()
-                        });
-                    }
+                        setTimeout(() => {
+                            removeElement("quiz-holder");
+                            removeElement("progress-bar");
+                            updateMoodList();
+                            setTimeout(() => {
+                                displayPlaylist().then(() => {
+                                    intializeSwiper()
+                                });
+                            }, 1000);
+                        }, 3000);
+                    };
                     // update Progress
                     updateProgressBar(progressValue, color1, color2);
                 }
@@ -205,13 +210,23 @@ function displayPlaylist() {
         let swiperWrapper = document.createElement("div")
         swiperWrapper.classList.add("swiper-wrapper")
 
-        let userPlaylists = JSON.parse(localStorage.getItem("capturedMood"));
+        let userPlaylistsAll = JSON.parse(localStorage.getItem("capturedMood"));
+
+        let userPlaylists = [...new Set(userPlaylistsAll)];
 
         userPlaylists.forEach(playlist => {
             let swiperSlider = document.createElement("div");
             swiperSlider.classList.add("swiper-slide");
             swiperSlider.innerHTML = `<div>${allPlaylists[playlist].title}</div>`;
 
+            const colorSelection = [...allPlaylists[playlist].color];
+            const firstPick = Math.floor(Math.random() * 3);
+            const color1 = "#" + colorSelection[firstPick];
+            colorSelection.splice(firstPick, 1);
+            const color2 = "#" + colorSelection[Math.floor(Math.random() * 2)];
+            swiperSlider.style.backgroundImage = `linear-gradient(45deg, ${color1} 34%, ${color2} 80%)`;
+
+            swiperWrapper.appendChild(iframe)
             swiperWrapper.appendChild(swiperSlider);
         })
 
@@ -249,17 +264,18 @@ function displayPlaylist() {
 
             retakeBtn.onclick = () => {
                 retakeBtn.disabled = true;
-                removeElement("result-holder");
                 removeBubbles();
-                setTimeout(newQuiz, 1500);
+                removeElement("result-holder");
+                setTimeout(() => {
+                    newQuiz();
+                }, 1000);
+
             };
 
             deleteBtn.onclick = () => {localStorage.clear();};
 
-            setTimeout(() => {
-                resolve();
-              }, 50);
-        }, 2000);
+            resolve();
+        }, 1000);
     });
 };
 
@@ -312,11 +328,11 @@ function revealElement(element) {
 
 function removeElement(element) {
     let targetElement = document.getElementById(element);
-    targetElement.classList.add("fade-out");
     targetElement.classList.remove("fade-in");
+    targetElement.classList.add("fade-out");
     setTimeout(() => {
         targetElement.remove();
-    }, 1025)
+    }, 1000)
 }
 
 function bubbleGenerator(key) {
@@ -405,7 +421,7 @@ function updateProgressBar(progress, color1, color2) {
     let newValue = progress;
 
     $({value: currentValue}).animate({value: newValue}, {
-        duration: 2000,
+        duration: 3000,
         easing: "swing",
         step: function(update) {
             $("#progress-bar").progressbar("value", update);
@@ -416,7 +432,6 @@ function updateProgressBar(progress, color1, color2) {
     })
 
     $(".ui-progressbar-value").css({
-        "background-image": `linear-gradient(45deg, ${color1} 34%, ${color2} 80%)`,
-        "transition": "background-image 5s ease-in-out"
+        "background-image": `linear-gradient(45deg, ${color1} 34%, ${color2} 80%)`
     })
 }
