@@ -119,11 +119,8 @@ main {
     grid-template-rows: .8fr .2fr;
     height: calc(100vh - 82.5px);
 }
-#quiz-holder {
+.main-script {
     height: 100%;
-}
-#quiz-holder > div {
-    height: inherit;
     display: grid;
     gap: 24px;
     grid-template-rows: 1fr 1fr;
@@ -195,7 +192,40 @@ main {
     border-radius: 50%;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.06);
 }
+/* --- result --- */
+#playlist-title {
+    text-align: left;
+    font-size: 74px;
+    line-height: .8;
+    font-weight: 600;
+}
 
+.swiper {
+    width: 100vw;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    background: #F7F2F6;
+    box-shadow: inset -1px 6px 6px 1px rgba(0, 0, 0, 0.1), inset 0px 4px 4px rgba(0, 0, 0, 0.06);
+}
+.swiper-wrapper {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+.swiper-slide {
+    height: inherit;
+    width: 800px;
+    box-sizing: border-box;
+    border-radius: 12px 12px;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    background-color: darkgray;
+    align-items: center;
+    font-size: 2rem;
+}
 
 /* -------- Animation --------- */
 .fade-out {

@@ -2,169 +2,121 @@
     "11a21a31a41a": {
         "link": "3yyuiUncXKXbPJZQGcgy3N",
         "title": "Infatuated",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["F7B3CD", "FCB1A6", "FFDCCC"]
     },
     "11a21a31a41b": {
         "link": "7KRrBS8ZFwz3T0tQZtIBrT",
         "title": "Limerence",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["FDD8DC", "B6B3E5", "FB6376"]
     },
     "11a21a31b42a": {
         "link": "3BMVdIB6DJNF40kU8bqIID",
         "title": "Energy",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["008000", "BED8B2", "E5E57A"]
     },
     "11a21a31b42b": {
         "link": "3riVD6NmRdGbYkvWHJ2Ffs",
-        "title": "SumBeams",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "title": "SunBeams",
+        "color": ["EAD61F", "F4E87C", "FFDE85"]
     },
     "11a21a31b42c": {
         "link": "3riVD6NmRdGbYkvWHJ2Ffs",
         "title": "Chill",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["2541B2", "89CFF0", "1768AC"]
     },
     "11a21b32a43a": {
         "link": "3bgf6hiU8O2UeyGUI5svir",
         "title": "Hanryo",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["874508", "C1630B", "D46D0C"]
     },
     "11a21b32a43b": {
         "link": "2W1chUD90s19ioaG0azLfY",
         "title": "Reverie",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["1768AC", "F4963E", "1768AC"]
     },
     "11a21b32b44a": {
         "link": "0WmMh5dYGfUNGgZ5Kk3fVK",
         "title": "Peace",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["719876", "B2BF8A", "88B3BA"]
     },
     "11a21b32b44b": {
         "link": "57hNsL2tcquTX8Zr1nxfPK",
         "title": "Ikigai",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["2541B2", "D2A80F", "1768AC"]
     },
     "11a21c33a45a": {
         "link": "6MXZrZwxk4J681qRQoUQ7F",
         "title": "Whisky Talk",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["F2D9D6", "D7435D", "902742"]
     },
     "11a21c33a45b": {
         "link": "6g1P2dzczebJ4m0Dyxj0DI",
         "title": "Luxurious",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["BD89D2", "F4BB01", "E8D873"]
     },
     "11a21c33b46a": {
         "link": "3fpZeYWGtuimCuGC6Rmgas",
         "title": "Anthem",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["980B1C", "C53049", "550000"]
     },
     "11a21c33b46b": {
         "link": "6knWMpVQd4He53SMjC5sLR",
         "title": "Haitoku",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["FF446A", "FF6EC7", "B8657D"]
     },
     "11a21c33b46c": {
         "link": "59iFCB8PVxHqJLPqV8caKk",
         "title": "Odore",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["6D00AF", "FF3FB9", "0298CA"]
     },
     "11b22a34a47a": {
         "link": "3yLGQiDaPUqpxLNjbRXile",
         "title": "Gwen-Chan-A",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["EDCF96", "D8B384", "EDC9AF"]
     },
     "11b22a34a47b": {
         "link": "2KHtT6YAz5dBSHi2TMbip6",
         "title": "Kokoni",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["F7C8A0", "F2B88B", "F3A66E"]
     },
     "11b22a34b48a": {
         "link": "6MmM2kZdVZPw67bkCB7Ck5",
         "title": "Prima Donna",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["E6B1D6", "BF8BB0", "916494"]
     },
     "11b22a34b48b": {
         "link": "5dHYFN4fzEwy80I819geph",
         "title": "Bojo",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["A95C68", "C7837F", "B8737C"]
     },
     "11b22b35a49a": {
         "link": "3bgf6hiU8O2UeyGUI5svir",
         "title": "Shiawase",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["252525", "3B4654", "313135"]
     },
     "11b22b35a49b": {
         "link": "6ySlx2OOGITtLiPcPTGApo",
         "title": "Mujo - Ephemeral",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["005F6B", "407B8A", "005B5B"]
     },
     "11b22b35b410a": {
         "link": "6og21AHGZJVIspuZQEGSSi",
         "title": "Calamitous",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["371722", "682E3C", "8A3C36"]
     },
     "11b22b35b410b": {
         "link": "4B2kUF69D5cZdNzrsrqlh5",
         "title": "Comtemporary",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["323549", "306D88", "5F8181"]
     },
     "11b22b35c411a": {
         "link": "61daCgbZDaWdDl0xiSjYuZ",
         "title": "Tohiko",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["908514", "193E61", "191970"]
     },
     "11b22b35c411b": {
         "link": "6joLJslhMg1l4Y9Sy24Y20",
         "title": "Ranbu",
-        "color1": "",
-        "color2": "",
-        "color3": ""
+        "color": ["BBA138", "6F00FF", "425ED2"]
     }
 }
