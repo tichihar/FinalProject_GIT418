@@ -200,6 +200,7 @@ div#intro-holder.main-script {
     position: absolute;
     border-radius: 50%;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.06);
+    opacity: .8;
 }
 
 /* --- result --- */
@@ -353,6 +354,11 @@ footer small {
     #delete-btn {
         position: absolute;
         right: 30px;
+    }
+    #retake-btn {
+        margin: 100px auto;
+        width: 392px;
+        height: 72px;
     }
 }
 
