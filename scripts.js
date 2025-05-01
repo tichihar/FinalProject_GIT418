@@ -1,5 +1,5 @@
 'use strict'
-// v
+// create an instance for later use
 let contentHolder = document.getElementById("main-content");
 // contains data retrieved from the questions.json 
 let allQuestions;
@@ -7,17 +7,17 @@ let allQuestions;
 let allPlaylists;
 // unique number to track which path the user took to match it with the playlist number
 let identifier = "";
-// track the progress
+// update the progress value
 let progressValue = 0;
-
+// store the current value
 let currentValue = 0;
 
+// create an object that holds all the color set info for bubble objects
 let colorPalettes = new Object;
 colorPalettes = {
     firstPalette: ["F4F4F4", "F4F4F6", "EEEEEE", "BFBFBF", "E6E6E9"],
     lovePalette: ["fbeaec", "e0bbcc", "fff1f5", "d7c1e0"],
     kiPalette: ["D4F1F9", "FFF2CC", "FFE5A1", "DCD9F2", "DFE4F2"],
-    doPalette: ["7914AD"],
     aiPalette: ["0E4A6C", "136290", "003769", "2C345C", "40434E", "879191", "615483"],
     rakuPalette: ["678D58", "98BB77 ", "C1D6AE", "FFC870", "F9EFDC"]
 }
@@ -30,7 +30,7 @@ window.addEventListener("load", () => {
     .then(data => {
         allQuestions = data;
     });
-
+    // get data from the playlists.json and assign it in the allPlaylists variable
     fetch("playlists.json")
         .then(response => response.json())
         .then(data => {
@@ -42,20 +42,22 @@ window.addEventListener("load", () => {
     introHolder.setAttribute("id", "intro-holder")
     introHolder.classList.add("transparent", "main-script");
     introHolder.innerHTML = `
-    <h1 id="start-title" class="upper-element">Let's capture<br />your mood with<br />Songs!</h1>
+    <h1 id="start-title">Let's capture your mood<br />with <span class="switch-color">Songs!</span></h1>
     <button id="launch-btn" class="white">Get Started ></button>
     `;
     contentHolder.appendChild(introHolder)
 
+    // display the newly appended element
     setTimeout(() => {
     revealElement("intro-holder");
-    }, 1000)
+    }, 500)
 
     // launch the quiz upon click to add event to the button to start the quiz
     document.getElementById("launch-btn").onclick = function() {
         // prevent from clicking more than one time
         document.getElementById("launch-btn").disabled = true;
 
+        //remove the intro-holder element
         removeElement("intro-holder");
         newQuiz();
     }
@@ -68,23 +70,23 @@ function newQuiz() {
     progressValue = 0;
     currentValue = 0;
 
-        // create an element to display quiz info
-        const quizHolder = document.createElement("div");
-        quizHolder.setAttribute("id", "quiz-holder");
-        quizHolder.classList.add("main-script", "transparent")
+    // create an element where quiz info will be displayed
+    const quizHolder = document.createElement("div");
+    quizHolder.setAttribute("id", "quiz-holder");
+    quizHolder.classList.add("main-script", "transparent")
 
-        // create a progress bar to track the quiz progrss
-        const pBar = document.createElement("div");
-        pBar.setAttribute("id", "progress-bar");
-        pBar.classList.add("transparent");
+    // create a progress bar to track the quiz progrss
+    const pBar = document.createElement("div");
+    pBar.setAttribute("id", "progress-bar");
+    pBar.classList.add("transparent");
 
-        // append all elements created in this function after the introHolder is completely gone
-        setTimeout(() => {
-            contentHolder.appendChild(quizHolder);
-            contentHolder.appendChild(pBar);
-            addProgressBar(progressValue)
-            displayQuestion("Q1-1");
-        }, 1000)
+    // append all elements created in this function after the introHolder is completely gone
+    setTimeout(() => {
+        contentHolder.appendChild(quizHolder);
+        contentHolder.appendChild(pBar);
+        addProgressBar(progressValue)
+        displayQuestion("Q1-1");
+    }, 1000)
 }
 
 // function to display questions
@@ -200,72 +202,35 @@ function displayPlaylist() {
         // create an iframe element to embed a spotify info
         let iframe = document.createElement("iframe");
         iframe.width = "95%";
-        iframe.height = "300";
+        iframe.height = "184";
         iframe.allow = "encrypted-media";
         iframe.src = `https://open.spotify.com/embed/playlist/${allPlaylists[identifier].link}?utm_source=generator`;
 
-        // swiper
-        let swiper = document.createElement("div");
-        swiper.classList.add("swiper");
-        let swiperWrapper = document.createElement("div")
-        swiperWrapper.classList.add("swiper-wrapper")
-
-        let userPlaylistsAll = JSON.parse(localStorage.getItem("capturedMood"));
-
-        let userPlaylists = [...new Set(userPlaylistsAll)];
-
-        userPlaylists.forEach(playlist => {
-            let swiperSlider = document.createElement("div");
-            swiperSlider.classList.add("swiper-slide");
-            swiperSlider.innerHTML = `<div>${allPlaylists[playlist].title}</div>`;
-
-            const colorSelection = [...allPlaylists[playlist].color];
-            const firstPick = Math.floor(Math.random() * 3);
-            const color1 = "#" + colorSelection[firstPick];
-            colorSelection.splice(firstPick, 1);
-            const color2 = "#" + colorSelection[Math.floor(Math.random() * 2)];
-            swiperSlider.style.backgroundImage = `linear-gradient(45deg, ${color1} 34%, ${color2} 80%)`;
-
-            swiperWrapper.appendChild(iframe)
-            swiperWrapper.appendChild(swiperSlider);
-        })
-
-        const pagination = document.createElement("div");
-        pagination.classList.add("swiper-pagination");
-
-        const prevBtn = document.createElement("div");
-        prevBtn.classList.add("swiper-button-prev");
-
-        const nextBtn = document.createElement("div");
-        nextBtn.classList.add("swiper-button-next");
-
-        swiper.appendChild(swiperWrapper);
-        swiper.appendChild(pagination);
-        swiper.appendChild(prevBtn);
-        swiper.appendChild(nextBtn);
-
-
         // create a button to let users take the quiz again
-        let retakeBtn = document.createElement("button")
-        retakeBtn.innerText = "Take the Quiz Again"
+        let retakeBtn = document.createElement("button");
+        retakeBtn.setAttribute("id", "retake-btn");
+        retakeBtn.innerText = "Take the Quiz Again";
 
         //create a button to delete the stored data
-        let deleteBtn = document.createElement("button")
+        let deleteBtn = document.createElement("button");
+        deleteBtn.setAttribute("id", "delete-btn");
         deleteBtn.innerText = "Delete saved playlists";
 
         setTimeout(() => {
             resultHolder.appendChild(intro);
             resultHolder.appendChild(title);
             resultHolder.appendChild(iframe);
-            resultHolder.appendChild(swiper);
-            resultHolder.appendChild(retakeBtn);
+            addSwiper();
             resultHolder.appendChild(deleteBtn);
+
+            contentHolder.appendChild(retakeBtn);
             resultHolder.classList.add("fade-in");
 
             retakeBtn.onclick = () => {
                 retakeBtn.disabled = true;
                 removeBubbles();
                 removeElement("result-holder");
+                removeElement("retake-btn")
                 setTimeout(() => {
                     newQuiz();
                 }, 1000);
@@ -286,6 +251,57 @@ function updateMoodList() {
     console.log(storedPlaylists);
 
     localStorage.setItem("capturedMood", JSON.stringify(storedPlaylists));
+}
+
+function addSwiper() {
+    // swiper
+    let swiper = document.createElement("div");
+    swiper.classList.add("swiper");
+    let swiperWrapper = document.createElement("div")
+    swiperWrapper.classList.add("swiper-wrapper")
+
+    let userPlaylistsAll = JSON.parse(localStorage.getItem("capturedMood"));
+
+    let userPlaylists = [...new Set(userPlaylistsAll)];
+
+    let count = 1;
+    userPlaylists.forEach(playlist => {
+        let swiperSlider = document.createElement("div");
+        swiperSlider.classList.add("swiper-slide");
+        swiperSlider.innerHTML = `<h2>${count}. ${allPlaylists[playlist].title}</h2>`;
+
+        let iframeHolder = document.createElement("div");
+        iframeHolder.classList.add("iframe-holder");
+
+        swiperSlider.dataset.playlistId = allPlaylists[playlist].link;
+
+        const colorSelection = [...allPlaylists[playlist].color];
+        const firstPick = Math.floor(Math.random() * 3);
+        const color1 = "#" + colorSelection[firstPick];
+        colorSelection.splice(firstPick, 1);
+        const color2 = "#" + colorSelection[Math.floor(Math.random() * 2)];
+        swiperSlider.style.backgroundImage = `linear-gradient(45deg, ${color1} 34%, ${color2} 80%)`;
+
+        swiperSlider.append(iframeHolder);
+        swiperWrapper.appendChild(swiperSlider);
+        count++;
+    })
+
+    const pagination = document.createElement("div");
+    pagination.classList.add("swiper-pagination");
+
+    const prevBtn = document.createElement("div");
+    prevBtn.classList.add("swiper-button-prev");
+
+    const nextBtn = document.createElement("div");
+    nextBtn.classList.add("swiper-button-next");
+
+    swiper.appendChild(swiperWrapper);
+    swiper.appendChild(pagination);
+    swiper.appendChild(prevBtn);
+    swiper.appendChild(nextBtn);
+
+    document.getElementById("result-holder").appendChild(swiper);
 }
 
 function intializeSwiper() {
@@ -311,6 +327,19 @@ function intializeSwiper() {
             slideShadows : true, // 先頭スライドのbox-shadowを有効化
         },
         loop: true, // ループの有効化
+        on: {
+            init: function() {
+                insertIframe(this.slides[this.activeIndex]);
+            },
+            slideChange: function() {
+                this.slides.forEach(slide => {
+                    let iframeHolder = slide.querySelector(".iframe-holder");
+                    if(iframeHolder)
+                        iframeHolder.innerHTML = "";
+                });
+                insertIframe(this.slides[this.activeIndex]);
+            }
+        },
       });
       swiper.update();
 
@@ -319,6 +348,17 @@ function intializeSwiper() {
       }, 50);
     });
 }
+
+function insertIframe(slide) {
+    let iframeHolder = slide.querySelector(".iframe-holder")
+
+    let iframe = document.createElement("iframe");
+    iframe.allow = "encrypted-media";
+    iframe.src = `https://open.spotify.com/embed/playlist/${slide.dataset.playlistId}?utm_source=generator`;
+
+    iframeHolder.appendChild(iframe);
+}
+
 
 function revealElement(element) {
     let targetElement = document.getElementById(element);

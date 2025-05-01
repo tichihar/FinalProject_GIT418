@@ -1,7 +1,7 @@
 {
     "Q1-1": {
         "_id": 11,
-        "question": "Imagine the ocean. Which version do you see right now?",
+        "question": "Imagine the ocean.<br />Which version do you see right now?",
         "answers": [
             {
                 "_id": "11a",
@@ -85,18 +85,18 @@
     },
     "Q3-2": {
         "_id": 32,
-        "question": "The world is ending in 24 hours. Which one would you likely to do?",
+        "question": "The world is ending in 24 hours.<br />Which one would you likely to do?",
         "answers": [
             {
                 "_id": "32a",
-                "answer": "go about your day as you usually do",
+                "answer": "stay with the one you would cherish till the very end",
                 "color": ["1768AC", "5DAAE9", "EE7674"],
                 "nextKey": "Q4-3",
                 "white": true
             },
             {
                 "_id": "32b",
-                "answer": "Show gratitude to as much people you love as possible",
+                "answer": "show gratitude to as many people you love as possible",
                 "color": ["D63230", "FFA62B", "FF5A5F"],
                 "nextKey": "Q4-4",
                 "white": true
@@ -105,7 +105,7 @@
     },
     "Q3-3": {
         "_id": 33,
-        "question": "Imagine you're sketching a tree in your mind. Which reflects the most with the one you had in head?",
+        "question": "Imagine you're sketching a tree in your mind.<br />Which reflects the most with the one you had?",
         "answers": [
             {
                 "_id": "33a",
@@ -125,7 +125,7 @@
     },
     "Q3-4": {
         "_id": 34,
-        "question": "You feel a tap on your shoulder. A woman stands before you — what kind of presence does she carry?",
+        "question": "You feel a tap on your shoulder.<br />A woman stands before you<br />— what kind of presence does she carry?",
         "answers": [
             {
                 "_id": "34a",
@@ -144,7 +144,7 @@
     },
     "Q3-5": {
         "_id": 35,
-        "question": "Tonight, you've become a celestial body. Which one are you right now?",
+        "question": "Tonight, you've become a celestial body.<br />Which one are you right now?",
         "answers": [
             {
                 "_id": "35a",
@@ -172,23 +172,25 @@
     },
     "Q4-1": {
         "_id": 41,
-        "question": "Boom! Your Fairly Godmother is here!! She offers to turn you into an animal so you can secretly get close to the one you have feelings for. Which would you choose?",
+        "question": "Boom! Your Fairy Godmother is here!!<br />She offers to turn you into an animal<br />to get closer to the one you are in love with.<br />Which would you choose?",
         "answers": [
             {
                 "_id": "41a",
                 "answer": "A chirping little bird",
-                "color": ["F7B3CD", "FCB1A6", "FFDCCC"]
+                "color": ["F7B3CD", "FCB1A6", "FFDCCC"],
+                "white": true
             },
             {
                 "_id": "41b",
                 "answer": "A nonchalant acting cat",
-                "color": ["FDD8DC", "B6B3E5", "FB6376"]
+                "color": ["FDD8DC", "B6B3E5", "FB6376"],
+                "white": true
             }
         ]
     },
     "Q4-2": {
         "_id": 42,
-        "question": "If your feelings right now had a color, what would they be?",
+        "question": "If your feelings right now had a color,<br />what would they be?",
         "answers": [
             {
                 "_id": "42a",
@@ -210,25 +212,25 @@
     },
     "Q4-3": {
         "_id": 43,
-        "question": "If your feelings right now had a color, what would they be?",
+        "question": "If your feelings right now had a color,<br />what would they be?",
         "answers": [
             {
                 "_id": "43a",
                 "answer": "Brown",
                 "color": ["874508", "C1630B", "D46D0C"],
-                "dark": true
+                "white": true
             },
             {
                 "_id": "43b",
                 "answer": "Orange",
                 "color": ["1768AC", "F4963E", "1768AC"],
-                "dark": true
+                "white": true
             }
         ]
     },
     "Q4-4": {
         "_id": 44,
-        "question": "If your feelings right now had a color, what would they be?",
+        "question": "If your feelings right now had a color,<br />what would they be?",
         "answers": [
             {
                 "_id": "44a",
@@ -244,7 +246,7 @@
     },
     "Q4-5": {
         "_id": 45,
-        "question": "If your feelings right now had a color, what would they be?",
+        "question": "If your feelings right now had a color,<br />what would they be?",
         "answers": [
             {
                 "_id": "45a",
@@ -255,13 +257,14 @@
             {
                 "_id": "45b",
                 "answer": "Yellow",
-                "color": ["BD89D2", "F4BB01", "E8D873"]
+                "color": ["BD89D2", "F4BB01", "E8D873"],
+                "white": true
             }
         ]
     },
     "Q4-6": {
         "_id": 46,
-        "question": "If your feelings right now had a color, what would they be?",
+        "question": "If your feelings right now had a color,<br />what would they be?",
         "answers": [
             {
                 "_id": "46a",
@@ -285,7 +288,7 @@
     },
     "Q4-7": {
         "_id": 47,
-        "question": "If your feelings right now had a color, what would they be?",
+        "question": "If your feelings right now had a color,<br />what would they be?",
         "answers": [
             {
                 "_id": "47a",
@@ -301,7 +304,7 @@
     },
     "Q4-8": {
         "_id": 48,
-        "question": "If your feelings right now had a color, what would they be?",
+        "question": "If your feelings right now had a color,<br />what would they be?",
         "answers": [
             {
                 "_id": "48a",
@@ -319,7 +322,7 @@
     },
     "Q4-9": {
         "_id": 49,
-        "question": "If your feelings right now had a color, what would they be?",
+        "question": "If your feelings right now had a color,<br />what would they be?",
         "answers": [
             {
                 "_id": "49a",
@@ -337,7 +340,7 @@
     },
     "Q4-10": {
         "_id": 410,
-        "question": "If your feelings right now had a color, what would they be?",
+        "question": "If your feelings right now had a color,<br />what would they be?",
         "answers": [
             {
                 "_id": "410a",
@@ -355,7 +358,7 @@
     }, 
     "Q4-11": {
         "_id": 411,
-        "question": "If your feelings right now had a color, what would they be?",
+        "question": "If your feelings right now had a color,<br />what would they be?",
         "answers": [
             {
                 "_id": "411a",

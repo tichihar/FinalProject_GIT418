@@ -118,14 +118,20 @@ main {
 }
 #main-content {
     display: grid;
-    grid-template-rows: .8fr .2fr;
-    height: calc(100vh - 82.5px);
+    grid-template-rows: .9fr .1fr;
+    min-height: calc(100vh - 80px - 88px);
+}
+div#intro-holder.main-script {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .main-script {
     height: 100%;
     display: grid;
     gap: 24px;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: .45fr .55fr;
     justify-items: center;
 }
 .upper-element {
@@ -170,7 +176,7 @@ main {
     z-index: -1;
     position:absolute;
     top: 0;
-    min-height: calc(100vh - 80px - 88px);
+    min-height: calc(100vh - 88px);
     width: 100vw;
     overflow: hidden;
 }
@@ -194,20 +200,40 @@ main {
     border-radius: 50%;
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.1), 0 6px 12px rgba(0, 0, 0, 0.06);
 }
+
 /* --- result --- */
+#result-holder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+#result-holder p:first-child {
+    padding-top: 16px;
+}
 #playlist-title {
     text-align: left;
-    font-size: 74px;
+    font-size: 64px;
     line-height: .8;
     font-weight: 600;
+}
+iframe {
+    letter-spacing: 2px;
+    max-width: 976px;
+}
+#retake-btn {
+    text-align: center;
+    margin: 24px auto;
+    background: var(--black);
+    color: var(--white);
 }
 
 .swiper {
     width: 100vw;
-    height: 50vh;
+    height: 30vh;
     display: flex;
     align-items: center;
-    background: #F7F2F6;
+    background: rgb(247 242 246 / 0.9);
     box-shadow: inset -1px 6px 6px 1px rgba(0, 0, 0, 0.1), inset 0px 4px 4px rgba(0, 0, 0, 0.06);
 }
 .swiper-wrapper {
@@ -220,28 +246,110 @@ main {
     height: inherit;
     width: 800px;
     box-sizing: border-box;
-    border-radius: 12px 12px;
+    border-radius: 5% / 10% 10%;
     display: flex;
-    justify-content: center;
     color: #ffffff;
-    background-color: darkgray;
-    align-items: center;
     font-size: 2rem;
 }
+.swiper-slide h2 {
+    margin-left: 16px;
+}
+.swiper-slide div.iframe-holder {
+    position: absolute;
+    transform: rotate(-25deg) scale(1.75) translate(148px, 224px);
+}
+#delete-btn {
+    width: 184px;
+    height: 40px;
+    font-size: 11px;
+    font-weight: 300;
+    align-self: end;
+    box-shadow: inset 6px 6px 8px 2px rgba(0, 0, 0, 0.1), inset 4px 6px 4px rgba(0, 0, 0, 0.06);
+    margin-top: 8%;
+}
 
-/* -------- footer --------- */
+/* -------- Footer --------- */
 footer {
     height: 80px;
     width: 100%;
     background: var(--black);
     color: var(--white);
+    padding-bottom: 10px;
 }
 footer small {
     height: inherit;
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    font-weight: 200;
 }
+
+/* -------- Responsive --------- */
+@media screen and (min-width: 1280px){
+    h1 {
+        font-size: 72px;
+    }
+    #launch-btn {
+        width: 560px;
+        height: 72px;
+        font-size: 24px;
+        border-radius: 40px / 40px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    button {
+        font-size: 20px;
+        width: 648px;
+        height: 80px;
+        border-radius: 40px / 40px;
+    }
+
+    /*--- result holder ---*/
+    #result-holder {
+        display: grid;
+        grid-template-rows: 1fr 1fr 5fr 5fr .5fr;
+        flex-direction: column;
+        align-items: center;
+        gap: unset;
+    }
+    iframe {
+        height: 400px;
+    }
+    #result-holder p:first-child {
+        font-size: 18px;
+        font-weight: 500;
+    }
+    #playlist-title{
+        letter-spacing: 2px;
+        font-size: 96px;
+    }
+    .swiper {
+        height: 50vh;
+    }
+    .swiper-wrapper {
+        height: 92%;
+    }
+    .swiper-slide {
+        position: relative;
+        overflow: hidden;
+        height: 416px;
+    }
+    .swiper-slide h2 {
+        font-size: 64px;
+        margin-left: 72px;
+        text-align: left;
+    }
+    .swiper-slide iframe {
+        height: 354px;
+        width: 330px;
+    }
+    #delete-btn {
+        position: absolute;
+        right: 30px;
+    }
+}
+
 /* -------- Animation --------- */
 .fade-out {
     opacity: 0;
