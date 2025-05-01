@@ -86,6 +86,7 @@ button {
     height: 72px;
     border-radius: 32px / 32px;
     border: unset;
+    color: var(--black);
 }
 .white {
     color: var(--white);
@@ -119,7 +120,7 @@ main {
 #main-content {
     display: grid;
     grid-template-rows: .9fr .1fr;
-    min-height: calc(100vh - 80px - 88px);
+    min-height: calc(100vh - 80px - 88px - 10px);
 }
 div#intro-holder.main-script {
     display: flex;
