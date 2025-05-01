@@ -25,11 +25,16 @@ colorPalettes = {
 // event called upon the pageload
 window.addEventListener("load", () => {
     // get data from the questions.json and assign it in the allQuestions variable
-    fetch("questions.json")
+    fetch("questionsJP.json")
     .then(response => response.json())
     .then(data => {
         allQuestions = data;
     });
+    // fetch("questions.json")
+    // .then(response => response.json())
+    // .then(data => {
+    //     allQuestions = data;
+    // });
     // get data from the playlists.json and assign it in the allPlaylists variable
     fetch("playlists.json")
         .then(response => response.json())
@@ -443,7 +448,6 @@ function removeBubbles() {
     }
     )}, 2000);
 };
-
 
 // JQuery starts from here
 function addProgressBar() {

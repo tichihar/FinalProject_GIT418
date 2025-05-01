@@ -1,17 +1,17 @@
 {
     "Q1-1": {
         "_id": 11,
-        "question": "Imagine the ocean.<br />Which version do you see right now?",
+        "question": "今思う海を想像してみて<br />どっちの方があってる?",
         "answers": [
             {
                 "_id": "11a",
-                "answer": "A lively beach, bustling with people",
+                "answer": "人々でにぎわうビーチ",
                 "color": ["FFE7D6", "FFA585", "7CC9CB"],
                 "nextKey": "Q2-1"
             },
             {
                 "_id": "11b",
-                "answer": "An endless expanse of deep blue ocean",
+                "answer": "果てしない紺碧の海中",
                 "color": ["0059B3", "004080", "012345"],
                 "nextKey": "Q2-2",
                 "white": true
@@ -21,23 +21,23 @@
     },
     "Q2-1": {
         "_id": 21,
-        "question": "Which symbol of nature is closest to how you feel right now?",
+        "question": "どの自然の象徴が今のあなたには近い?",
         "answers": [
             {
                 "_id": "21a",
-                "answer": "A glowing, golden sun",
+                "answer": "あたたかく照らす太陽",
                 "color": ["FAB982", "F4AE52", "F4CC7F"],
                 "nextKey": "Q3-1"
             },
             {
                 "_id": "21b",
-                "answer": "A gentle breeze caressing past cheeks",
+                "answer": "頬をなでる優しい風",
                 "color": ["6DC2C5", "B8E5D1", "93D4CB"],
                 "nextKey": "Q3-2"
             },
             {
                 "_id": "21c",
-                "answer": "A moon shining through the midnight veil",
+                "answer": "夜の帳にかがやく月",
                 "color": ["BBA138", "5C6B8A", "2E3440"],
                 "nextKey": "Q3-3",
                 "white": true
@@ -47,17 +47,17 @@
     },
     "Q2-2": {
         "_id": 22,
-        "question": "Which feeling is about to swallow you whole?",
+        "question": "今あなたが包み込まれてしまいそうなものは?",
         "answers": [
             {
                 "_id": "22a",
-                "answer": "The crimson of dusk",
+                "answer": "夕暮れの赤",
                 "color": ["CC7D9A", "F3A76E", "F0DC88"],
                 "nextKey": "Q3-4"
             },
             {
                 "_id": "22b",
-                "answer": "The eternal dark of night",
+                "answer": "夜の常闇",
                 "color": ["0A0A0A", "252525", "141414"],
                 "nextKey": "Q3-5",
                 "white": true
@@ -67,17 +67,17 @@
     },
     "Q3-1": {
         "_id": 31,
-        "question": "A child is playing in front of you — what are they holding?",
+        "question": "目の前ではしゃぐ子供 — 手には何を持っている?",
         "answers": [
             {
                 "_id": "31a",
-                "answer": "A balloon that looks like it could pop at any moment",
+                "answer": "今にも割れそうなふうせん",
                 "color": ["EFCA08", "F4A6A4", "EE7674"],
                 "nextKey": "Q4-1"
             },
             {
                 "_id": "31b",
-                "answer": "A paper airplane with its wings wide open",
+                "answer": "つばさを広げたた紙ひこうき",
                 "color": ["FFE485", "92BEC8", "90B69F"],
                 "nextKey": "Q4-2"
             }
@@ -85,18 +85,18 @@
     },
     "Q3-2": {
         "_id": 32,
-        "question": "The world is ending in 24 hours.<br />Which one would you likely to do?",
+        "question": "24時間後に世界が滅亡します<br />どちらの行動を今のあなたならとりたい?",
         "answers": [
             {
                 "_id": "32a",
-                "answer": "stay with the one you would cherish till the very end",
+                "answer": "最後の時まで愛する人とふたりで過ごす",
                 "color": ["1768AC", "5DAAE9", "EE7674"],
                 "nextKey": "Q4-3",
                 "white": true
             },
             {
                 "_id": "32b",
-                "answer": "show gratitude to as many people you love as possible",
+                "answer": "大切な人たちにできるだけ感謝の気持ちを伝える",
                 "color": ["D63230", "FFA62B", "FF5A5F"],
                 "nextKey": "Q4-4",
                 "white": true
@@ -105,18 +105,18 @@
     },
     "Q3-3": {
         "_id": 33,
-        "question": "Imagine you're sketching a tree in your mind.<br />Which reflects the most with the one you had?",
+        "question": "頭の中で木をスケッチしてみて<br />どちらの方があなたが今思う木に当てはまる?",
         "answers": [
             {
                 "_id": "33a",
-                "answer": "Like an apple tree, bearing fruits here and there",
+                "answer": "あちこちに実がなるリンゴの木",
                 "color": ["F45D52", "F47066", "FF709B"],
                 "nextKey": "Q4-5",
                 "white": true
             },
             {
                 "_id": "33b",
-                "answer": "Like a pine tree, pointy top reaching for the sky",
+                "answer": "とがった先が天高く伸びるマツの木",
                 "color": ["779834", "99C149", "A07240"],
                 "nextKey": "Q4-6",
                 "white": true
@@ -125,17 +125,17 @@
     },
     "Q3-4": {
         "_id": 34,
-        "question": "You feel a tap on your shoulder.<br />A woman stands before you<br />— what kind of presence does she carry?",
+        "question": "トントン、肩をたたかれ<br />振り返るとそこに立つ女性の姿<br />— その人の印象はどちらの方が近い?",
         "answers": [
             {
                 "_id": "34a",
-                "answer": "A gentle figure with a soft and delicate aura",
+                "answer": "細身だが立ち方に揺らぎのない人",
                 "color": ["EF8B80", "EED181", "F7EAC5"],
                 "nextKey": "Q4-7"
             },
             {
                 "_id": "34b",
-                "answer": "A lively woman, glowing with confidence and spirit",
+                "answer": "健康的だがよわよわしく笑う人",
                 "color": ["908483", "CBADA4", "A95C68"],
                 "nextKey": "Q4-8",
                 "white": true
@@ -144,25 +144,25 @@
     },
     "Q3-5": {
         "_id": 35,
-        "question": "Tonight, you've become a celestial body.<br />Which one are you right now?",
+        "question": "今宵、天体の一部になったら<br />あなたは次のうちどれになりそう?",
         "answers": [
             {
                 "_id": "35a",
-                "answer": "A faint star twinkling on the edge of the universe",
+                "answer": "宇宙の片隅にいる、今にも消えそうな星",
                 "color": ["262103", "908514", "292500"],
                 "nextKey": "Q4-9",
                 "white": true
             },
             {
                 "_id": "35b",
-                "answer": "A black hole that devours light and sound",
+                "answer": "光も闇も飲み込むブラックホール",
                 "color": ["060A1E", "123569", "320C50"],
                 "nextKey": "Q4-10",
                 "white": true
             },
             {
                 "_id": "35c",
-                "answer": "A meteor tearing through the silence of night",
+                "answer": "夜の漆黒を破るメテオ",
                 "color": ["20495B", "8B99A7", "193E61"],
                 "nextKey": "Q4-11",
                 "white": true
@@ -172,17 +172,17 @@
     },
     "Q4-1": {
         "_id": 41,
-        "question": "Boom! Your Fairy Godmother is here!!<br />She offers to turn you into an animal<br />to get closer to the one you are in love with.<br />Which would you choose?",
+        "question": "ポンッ! フェアリーゴッドマザーよ!!<br />あなたの気になる人に近づけるよう<br />動物に変身させてあげるわ!!<br />さあ、どちらがよろしい?",
         "answers": [
             {
                 "_id": "41a",
-                "answer": "A chirping little bird",
+                "answer": "さえずる小さなトリ",
                 "color": ["F7B3CD", "FCB1A6", "FFDCCC"],
                 "white": true
             },
             {
                 "_id": "41b",
-                "answer": "A nonchalant acting cat",
+                "answer": "無頓着をよそおうネコ",
                 "color": ["FDD8DC", "B6B3E5", "FB6376"],
                 "white": true
             }
@@ -190,21 +190,21 @@
     },
     "Q4-2": {
         "_id": 42,
-        "question": "If your feelings right now had a color,<br />what would they be?",
+        "question": "今のあなたの気持ちが色なら,<br />どの色?",
         "answers": [
             {
                 "_id": "42a",
-                "answer": "Green",
+                "answer": "みどり",
                 "color": ["008000", "BED8B2", "E5E57A"]
             },
             {
                 "_id": "42b",
-                "answer": "Yellow",
+                "answer": "きいろ",
                 "color": ["EAD61F", "F4E87C", "FFDE85"]
             },
             {
                 "_id": "42c",
-                "answer": "Blue",
+                "answer": "あお",
                 "color": ["2541B2", "89CFF0", "1768AC"]
             }
         ],
@@ -212,17 +212,17 @@
     },
     "Q4-3": {
         "_id": 43,
-        "question": "If your feelings right now had a color,<br />what would they be?",
+        "question": "今のあなたの気持ちが色なら,<br />どの色?",
         "answers": [
             {
                 "_id": "43a",
-                "answer": "Brown",
+                "answer": "ちゃいろ",
                 "color": ["874508", "C1630B", "D46D0C"],
                 "white": true
             },
             {
                 "_id": "43b",
-                "answer": "Orange",
+                "answer": "だいだいいろ",
                 "color": ["1768AC", "F4963E", "1768AC"],
                 "white": true
             }
@@ -230,33 +230,33 @@
     },
     "Q4-4": {
         "_id": 44,
-        "question": "If your feelings right now had a color,<br />what would they be?",
+        "question": "今のあなたの気持ちが色なら,<br />どの色?",
         "answers": [
             {
                 "_id": "44a",
-                "answer": "Green",
+                "answer": "みどり",
                 "color": ["719876", "B2BF8A", "88B3BA"]
             },
             {
                 "_id": "44b",
-                "answer": "Blue",
+                "answer": "あお",
                 "color": ["2541B2", "D2A80F", "1768AC"]
             }
         ]
     },
     "Q4-5": {
         "_id": 45,
-        "question": "If your feelings right now had a color,<br />what would they be?",
+        "question": "今のあなたの気持ちが色なら,<br />どの色?",
         "answers": [
             {
                 "_id": "45a",
-                "answer": "Pink",
+                "answer": "ピンク",
                 "color": ["F2D9D6", "D7435D", "902742"],
                 "white": true
             },
             {
                 "_id": "45b",
-                "answer": "Yellow",
+                "answer": "きいろ",
                 "color": ["BD89D2", "F4BB01", "E8D873"],
                 "white": true
             }
@@ -264,23 +264,23 @@
     },
     "Q4-6": {
         "_id": 46,
-        "question": "If your feelings right now had a color,<br />what would they be?",
+        "question": "今のあなたの気持ちが色なら,<br />どの色?",
         "answers": [
             {
                 "_id": "46a",
-                "answer": "Maroon",
+                "answer": "くりいろ",
                 "color": ["980B1C", "C53049", "550000"],
                 "white": true
             },
             {
                 "_id": "46b",
-                "answer": "Hot Pink",
+                "answer": "濃いピンク",
                 "color": ["FF446A", "FF6EC7", "B8657D"],
                 "white": true
             },
             {
                 "_id": "46c",
-                "answer": "Violet",
+                "answer": "バイオレット",
                 "color": ["6D00AF", "FF3FB9", "0298CA"],
                 "white": true
             }
@@ -288,33 +288,33 @@
     },
     "Q4-7": {
         "_id": 47,
-        "question": "If your feelings right now had a color,<br />what would they be?",
+        "question": "今のあなたの気持ちが色なら,<br />どの色?",
         "answers": [
             {
                 "_id": "47a",
-                "answer": "Desert sand",
+                "answer": "すな色",
                 "color": ["EDCF96", "D8B384", "EDC9AF"]
             },
             {
                 "_id": "47b",
-                "answer": "Coral",
+                "answer": "サンゴ色",
                 "color": ["F7C8A0", "F2B88B", "F3A66E"]
             }
         ]
     },
     "Q4-8": {
         "_id": 48,
-        "question": "If your feelings right now had a color,<br />what would they be?",
+        "question": "今のあなたの気持ちが色なら,<br />どの色?",
         "answers": [
             {
                 "_id": "48a",
-                "answer": "Lavender",
+                "answer": "ラベンダー色",
                 "color": ["E6B1D6", "BF8BB0", "916494"],
                 "white": true
             },
             {
                 "_id": "48b",
-                "answer": "Carmine",
+                "answer": "紅色",
                 "color": ["A95C68", "C7837F", "B8737C"],
                 "white": true
             }
@@ -322,17 +322,17 @@
     },
     "Q4-9": {
         "_id": 49,
-        "question": "If your feelings right now had a color,<br />what would they be?",
+        "question": "今のあなたの気持ちが色なら,<br />どの色?",
         "answers": [
             {
                 "_id": "49a",
-                "answer": "Chacoal Gray",
+                "answer": "グレー",
                 "color": ["252525", "3B4654", "313135"],
                 "white": true
             },
             {
                 "_id": "49b",
-                "answer": "Teal",
+                "answer": "あおみどり",
                 "color": ["005F6B", "407B8A", "005B5B"],
                 "white": true
             }
@@ -340,17 +340,17 @@
     },
     "Q4-10": {
         "_id": 410,
-        "question": "If your feelings right now had a color,<br />what would they be?",
+        "question": "今のあなたの気持ちが色なら,<br />どの色?",
         "answers": [
             {
                 "_id": "410a",
-                "answer": "Crimson",
+                "answer": "濃い赤",
                 "color": ["371722", "682E3C", "8A3C36"],
                 "white": true
             },
             {
                 "_id": "410b",
-                "answer": "Petrol Blue",
+                "answer": "濃いあおみどり",
                 "color": ["323549", "306D88", "5F8181"],
                 "white": true
             }
@@ -358,17 +358,17 @@
     }, 
     "Q4-11": {
         "_id": 411,
-        "question": "If your feelings right now had a color,<br />what would they be?",
+        "question": "今のあなたの気持ちが色なら,<br />どの色?",
         "answers": [
             {
                 "_id": "411a",
-                "answer": "Midnight Blue",
+                "answer": "こんいろ",
                 "color": ["908514", "193E61", "191970"],
                 "white": true
             },
             {
                 "_id": "411b",
-                "answer": "Electric Indgo",
+                "answer": "むらさき",
                 "color": ["BBA138", "6F00FF", "425ED2"],
                 "white": true
             }
